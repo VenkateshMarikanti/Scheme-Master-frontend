@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Stars at the top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,5l1.5,3h3l-2.5,2l1,3.5l-3,-2l-3,2l1,-3.5l-2.5,-2h3z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,10l1.2,2.4h2.4l-2,1.6l0.8,2.8l-2.4,-1.6l-2.4,1.6l0.8,-2.8l-2,-1.6h2.4z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,10l1.2,2.4h2.4l-2,1.6l0.8,2.8l-2.4,-1.6l-2.4,1.6l0.8,-2.8l-2,-1.6h2.4z" />
+
+    <!-- Dome/Building top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,20h10v2h-10z M42,22h16v5h-16z M50,15c-2,0 -4,2 -4,4h8c0,-2 -2,-4 -4,-4z" />
+
+    <!-- Open Book -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,35 L48,35 L48,75 L15,80 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M85,35 L52,35 L52,75 L85,80 Z" />
+    
+    <!-- Central S Symbol -->
+    <path
+        android:fillColor="#1E7068"
+        android:pathData="M44,45 c0,-3 3,-5 6,-5 c3,0 6,2 6,5 c0,2 -2,3 -4,4 s-4,2 -4,4 c0,3 3,5 6,5 c3,0 6,-2 6,-5 h-2 c0,2 -2,3 -4,3 c-2,0 -4,-1 -4,-3 c0,-2 2,-3 4,-4 s4,-2 4,-4 c0,-4 -4,-7 -8,-7 c-4,0 -8,3 -8,7 z" />
+    <path
+        android:fillColor="#1E7068"
+        android:pathData="M50,38v24 M46,40h8 M46,62h8"
+        android:strokeWidth="1.5"
+        android:strokeColor="#1E7068" />
+
+    <!-- Gear at the bottom -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,85c-5,0 -10,-2 -10,-5h20c0,3 -5,5 -10,5z M45,80l-2,3h2l1,-3z M53,80l2,3h-2l-1,-3z M40,82l-3,1l1,2l2,-3z M60,82l3,1l-1,2l-2,-3z" />
+
+</vector>
