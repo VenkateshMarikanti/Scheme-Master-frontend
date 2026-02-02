@@ -64,6 +64,7 @@ class UploadDocsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_upload_docs)
 
         currentSchemeId = intent.getIntExtra("SCHEME_ID", 1)
+        // Use a default list if the extra is not provided, which prevents the crash.
         requiredDocs = intent.getStringArrayExtra("REQUIRED_DOCS") ?: arrayOf("Aadhaar Card", "Income Certificate")
 
         layoutDocumentsContainer = findViewById(R.id.layoutDocumentsContainer)
@@ -88,10 +89,7 @@ class UploadDocsActivity : AppCompatActivity() {
     }
 
     private fun setupDynamicDocCards() {
-        val headerCount = 2 
-        while (layoutDocumentsContainer.childCount > headerCount) {
-            layoutDocumentsContainer.removeViewAt(headerCount)
-        }
+        layoutDocumentsContainer.removeAllViews() // Clear previous views
 
         requiredDocs.forEach { docName ->
             val cardView = LayoutInflater.from(this).inflate(R.layout.item_upload_doc_card, layoutDocumentsContainer, false)
@@ -127,9 +125,7 @@ class UploadDocsActivity : AppCompatActivity() {
     private fun handleFileSelection(uri: Uri) {
         val fileName = getFileName(uri).lowercase()
         
-        // Validate format
-        if (fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") || 
-            fileName.endsWith(".png") || fileName.endsWith(".pdf")) {
+        if (fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") || fileName.endsWith(".png") || fileName.endsWith(".pdf")) {
             
             uploadedDocsMap[currentUploadingDoc] = uri
 
@@ -140,7 +136,7 @@ class UploadDocsActivity : AppCompatActivity() {
                 val cardFile = it.findViewById<MaterialCardView>(R.id.cardFile)
                 val tvFileName = it.findViewById<TextView>(R.id.tvFileName)
 
-                tvFileName.text = fileName
+                tvFileName.text = getFileName(uri)
                 tvStatus.text = "UPLOADED"
                 tvStatus.setTextColor(resources.getColor(R.color.teal_700, null))
                 btnUpload.visibility = View.GONE

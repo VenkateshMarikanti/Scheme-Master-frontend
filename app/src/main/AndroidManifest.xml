@@ -32,6 +32,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".network.SubscriptionActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

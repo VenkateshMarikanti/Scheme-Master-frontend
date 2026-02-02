@@ -5,8 +5,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object RetrofitClient {
-    private const val BASE_URL = "https://kb0zx3zt-80.inc1.devtunnels.ms/schememasters/"
+object    RetrofitClient {
+    // UPDATED: Changed to the new IP address provided by the user
+    private const val BASE_URL = "http://14.139.187.229:8081/oct/spic_732/schememasters/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .connectTimeout(60, TimeUnit.SECONDS)

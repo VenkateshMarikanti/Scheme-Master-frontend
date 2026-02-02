@@ -3,6 +3,7 @@ package com.simats.schememasters.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.simats.schememasters.R
@@ -16,6 +17,7 @@ class FarmerSchemeAdapter(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView = view.findViewById(R.id.tvPostMatricTitle)
         val subtitle: TextView = view.findViewById(R.id.tvSubtitle)
+        val icon: ImageView = view.findViewById(R.id.ivSchemeIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,6 +30,11 @@ class FarmerSchemeAdapter(
         val scheme = schemes[position]
         holder.title.text = scheme.schemeName
         holder.subtitle.text = "${scheme.landType} • Farmer Scheme"
+        
+        // Custom icon for farmer schemes
+        holder.icon.setImageResource(R.drawable.ic_farmer)
+        holder.icon.setColorFilter(holder.itemView.context.resources.getColor(R.color.teal_700, null))
+        
         holder.itemView.setOnClickListener { onClick(scheme) }
     }
 

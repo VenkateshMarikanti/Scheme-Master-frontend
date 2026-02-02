@@ -52,6 +52,13 @@ dependencies {
     // Google Sign-In
     implementation(libs.play.services.auth)
 
+    // ML Kit Text Recognition
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.0")
+
+    // Google Play Billing
+    implementation("com.android.billingclient:billing-ktx:7.0.0")
+// Google Play Billing
+    implementation("com.android.billingclient:billing-ktx:6.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

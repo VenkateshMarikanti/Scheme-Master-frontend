@@ -3,9 +3,9 @@ package com.simats.schememasters.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.card.MaterialCardView
 import com.simats.schememasters.R
 import com.simats.schememasters.models.StudentScheme
 
@@ -17,12 +17,12 @@ class SchemeAdapter(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView = view.findViewById(R.id.tvPostMatricTitle)
         val subtitle: TextView = view.findViewById(R.id.tvSubtitle)
-        val card: MaterialCardView = view.findViewById(R.id.cardAllPostMatric)
+        val icon: ImageView = view.findViewById(R.id.ivSchemeIcon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout. item_scheme_dynamic, parent, false)
+            .inflate(R.layout.item_scheme_dynamic, parent, false)
         return ViewHolder(view)
     }
 
@@ -30,6 +30,10 @@ class SchemeAdapter(
         val scheme = schemes[position]
         holder.title.text = scheme.schemeName
         holder.subtitle.text = "${scheme.casteName} • Scholarship"
+        
+        // Custom icon for student schemes
+        holder.icon.setImageResource(R.drawable.ic_student)
+        
         holder.itemView.setOnClickListener { onClick(scheme) }
     }
 
