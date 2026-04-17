@@ -29,11 +29,15 @@ SchemeMaster is an Android application designed to help users discover governmen
 
 Visual representation of key features:
 
+## 📸 Screenshots
+
+Visual representation of key features:
+
 <p align="center">
-  <img src="screenshots/home.png" width="220"/>
-  <img src="screenshots/schemes.png" width="220"/>
-  <img src="screenshots/maps.png" width="220"/>
-  <img src="screenshots/documents.png" width="220"/>
+  <img src="screenshots/home.jpeg" width="220"/>
+  <img src="screenshots/schemes.jpeg" width="220"/>
+  <img src="screenshots/maps.jpeg" width="220"/>
+  <img src="screenshots/documents.jpeg" width="220"/>
 </p>
 
 ---
